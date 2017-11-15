@@ -10,14 +10,62 @@ output:
 library(flexdashboard)
 ```
 
+```{r other libraries}
+library(tidyverse)
+library(janitor)
+library(stringr)
+library(forcats)
+library(viridis)
+library(plotly)
+library(ggplot2)
+library(ggthemes)
+```
+
+
+```{r accessing and cleaning data}
+ny_noaa_data_tidy = read_csv("./nynoaadat.zip") %>%
+  clean_names() %>%
+  drop_na() %>%
+  separate(date, into = c("year", "month", "day"), "-") %>%
+  mutate(month = as.factor(month), prcp = as.numeric(prcp), tmin = as.numeric(tmin), 
+         prcp = prcp / 10,
+         tmin = tmin / 10) %>% 
+  mutate(month = recode(month,
+                          "01" = "January",
+                          "02" = "February",
+                          "03" = "March",
+                          "04" = "April",
+                          "05" = "May",
+                          "06" = "June",
+                          "07" = "July",
+                          "08" = "August",
+                          "09" = "September",
+                          "10" = "October",
+                          "11" = "November",
+                          "12" = "December")) %>%
+  select (year, month, day, prcp, tmin, snow) %>%
+  filter(year <= "1989")
+```
+
+
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A
+### Patterns of precipitation for 1981-1989 
 
-```{r}
-
+```{r geom_path}
+geom_path_ggplot = 
+ny_noaa_data_tidy %>%
+  group_by(month, year) %>%
+  summarize(average_prcp = mean(prcp, na.rm = TRUE)) %>%
+   ggplot(aes(x = month, y = average_prcp, group = year, color = year)) +
+  geom_path(alpha = 0.4)+
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  labs(x = "Month", y = "average snow (mm)")
+    
+ggplotly(geom_path_ggplot)
 ```
+
 
 Column {data-width=350}
 -----------------------------------------------------------------------
