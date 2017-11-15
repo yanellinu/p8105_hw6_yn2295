@@ -51,7 +51,7 @@ ny_noaa_data_tidy = read_csv("./nynoaadat.zip") %>%
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Patterns of precipitation for 1981-1989 
+### Monthly patterns of precipitation from 1981 to 1989 
 
 ```{r geom_path}
 geom_path_ggplot = 
@@ -61,7 +61,7 @@ ny_noaa_data_tidy %>%
    ggplot(aes(x = month, y = average_prcp, group = year, color = year)) +
   geom_path(alpha = 0.4)+
   theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
-  labs(x = "Month", y = "average snow (mm)")
+  labs(x = "Month", y = "average precipitation (mm)")
     
 ggplotly(geom_path_ggplot)
 ```
@@ -70,9 +70,14 @@ ggplotly(geom_path_ggplot)
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
 
+### Range of minimun temperature in degrees C from 1981-1989
 ```{r}
+ny_noaa_data_tidy %>%
+  group_by(year) %>%
+   plot_ly(y = ~tmin, x = ~year, color = ~year, type = "box",
+          colors = "Set2") 
+
 
 ```
 
