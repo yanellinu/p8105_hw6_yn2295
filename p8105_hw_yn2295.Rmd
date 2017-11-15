@@ -1,5 +1,5 @@
 ---
-title: "Untitled"
+title: "Precipitation patterns from 1981-1989"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
