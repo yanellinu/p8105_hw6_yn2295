@@ -81,9 +81,18 @@ ny_noaa_data_tidy %>%
 
 ```
 
-### Chart C
+
+### Variation in precipitation depending on average minimun temperature
 
 ```{r}
+geom_smooth_ggplot =
+  ny_noaa_data_tidy %>% 
+  ggplot(aes(x = tmin, y = prcp)) +
+geom_smooth() +
+ labs( x = "tmin", y = "prcp")
+
+ggplotly(geom_smooth_ggplot)
 
 ```
+
 
