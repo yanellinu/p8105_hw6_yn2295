@@ -1,7 +1,30 @@
 ---
-title: "Holy cow!"
+title: "Yanelli Nunez"
 ---
 
-### I have a webpage!
+### Patterns of precipitation and temperature in NYC during the 80s
 
-And I can put all kinds of stuff on it!
+<br><center><img src="images/rain in nyc.jpg" style="width:75%; border:10px solid #000000"></center>
+<br>
+
+The National Oceanic and Atmospheric Association (NOAA) of the National Centers for Environmental Information (NCEI) provides public access to weather data including the Global Historical Climatology Network. The GHCN is a daily database of summary statistics from weather stations around the world, and it contains records from over 100,000 stations in 180 countries and territories. NCEI provides numerous daily variables, including maximum and minimum temperature, total daily precipitation, snowfall, and snow depth. However, the record length and period of record vary by station and cover intervals ranging from less than a year to more than 175 year.  A more detailed description of the data can be found [here](https://www.ncdc.noaa.gov/ghcn-daily-description). For our assessment, we are focusing on weather information recorded by stations located in New York only. 
+
+Through our exploratory study, we are interested on determine whether lower temperatures are associated with higher levels of precipitation. Thus, we focus on the years 1981 to 1989 to include the 1983 blizzard that produce abnormally high levels of rain. We limited the variables to tmin, year, month, and precipitation. Furthermore, the temperature and precipitation variables were converted to millimeters and Celsius respectively as the NOAA provides them as tenths of millimeters and tenths of Celsius. The dataset use for this assessment was accessed from the [NOAA National Climatic Data Center](http://doi.org/10.7289/V5D21VHZ) on August 15 2017.
+
+In the dashboard subheading you can find interactive graphics for monthly precipitation patterns in NYC from 1981-1989 as well as, minimum temperature ranges from these same years, and a smoothline graph of the relationship between temperature and precipitation. 
+ 
+For a detail step by step overview of the data processing please visit the [p8105_hw6_yn2295](https://github.com/yanellinu/p8105_hw6_yn2295) repository in my GitHub account. 
+
+###Contact Information
+
+Yanelli Nunez 
+<br>
+[Department of Environmental Health Sciences](https://www.mailman.columbia.edu/become-student/departments/environmental-health-sciences-ehs)
+<br>
+[Columbia Mailman School of Public Health](https://www.mailman.columbia.edu/)
+<br>
+722 West 168th Street
+<br>
+New York, New York 10032
+
+Email: yn2295@columbia.edu

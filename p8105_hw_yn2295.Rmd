@@ -43,7 +43,7 @@ ny_noaa_data_tidy = read_csv("./nynoaadat.zip") %>%
                           "10" = "October",
                           "11" = "November",
                           "12" = "December")) %>%
-  select (year, month, day, prcp, tmin, snow) %>%
+  select (year, month, prcp, tmin) %>%
   filter(year <= "1989")
 ```
 
