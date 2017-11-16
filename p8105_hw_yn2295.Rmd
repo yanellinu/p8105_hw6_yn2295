@@ -72,7 +72,7 @@ Column {data-width=350}
 
 
 ### Range of minimun temperature in degrees C from 1981-1989
-```{r}
+```{r boxplot}
 ny_noaa_data_tidy %>%
   group_by(year) %>%
    plot_ly(y = ~tmin, x = ~year, color = ~year, type = "box",
@@ -84,7 +84,7 @@ ny_noaa_data_tidy %>%
 
 ### Variation in precipitation depending on average minimun temperature
 
-```{r}
+```{r geom_smooth}
 geom_smooth_ggplot =
   ny_noaa_data_tidy %>% 
   ggplot(aes(x = tmin, y = prcp)) +

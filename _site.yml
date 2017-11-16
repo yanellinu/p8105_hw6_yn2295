@@ -3,11 +3,12 @@ output_dir: "."
 navbar:
   title: "Home"
   right:
-    - text: "About"
-      href: about.html
+    - text: "Dashboard"
+      href: p8105_hw_yn2295.html
     - icon: fa-envelope fa-lg
       href: mailto:<yn2295@cumc.edu>
     - icon: fa-github fa-lg
       href: http://github.com/<yanellinu>/
+      
 output:
   html_document
