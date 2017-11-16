@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "Dashboard"
 ---
 
 ### About this site
