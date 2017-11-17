@@ -1,0 +1,10 @@
+---
+title: "P8105_hw6_yn2295"
+author: "Yanelli Nunez"
+date: "11/16/2017"
+output: html_document
+---
+
+Collaborators: Elizabeth Gibson & Ahlam Abuawad
+
+Please find my website [here](https://yanellinu.github.io/p8105_hw6_yn2295/)
